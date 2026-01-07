@@ -2,33 +2,92 @@
 <html>
 <head>
     <title>Form Validation</title>
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box {
+            background-color: white;
+            padding: 25px 35px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        #msg {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2>Registration Form</h2>
+<div class="form-box">
+    <h2>Registration Form</h2>
 
-<form onsubmit="return validate()">
+    <form onsubmit="return validate()">
 
-    Name:
-    <input type="text" id="name"><br><br>
+        <label>Name</label>
+        <input type="text" id="name">
 
-    Email:
-    <input type="text" id="email"><br><br>
+        <label>Email</label>
+        <input type="text" id="email">
 
-    Password:
-    <input type="password" id="password"><br><br>
+        <label>Password</label>
+        <input type="password" id="password">
 
-    Phone Number:
-    <input type="text" id="phone"><br><br>
+        <label>Phone Number</label>
+        <input type="text" id="phone">
 
-    Date of Birth:
-    <input type="date" id="dob"><br><br>
+        <label>Date of Birth</label>
+        <input type="date" id="dob">
 
-    <input type="submit" value="Submit">
+        <input type="submit" value="Submit">
+    </form>
 
-</form>
-
-<p id="msg" style="color:red;"></p>
+    <p id="msg" style="color:red;"></p>
+</div>
 
 <script>
 function validate() {
